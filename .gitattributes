@@ -1,8 +1,3 @@
-*.v linguist-detectable=false
-*.lib linguist-detectable=false
-runs/* linguist-detectable=false
-*.v linguist-vendored
-*.tcl linguist-vendored
-*.v linguist-vendored
-*.tcl linguist-vendored
-runs/ linguist-vendored
+*.v linguist-generated
+*.tcl linguist-generated
+runs/ linguist-generated

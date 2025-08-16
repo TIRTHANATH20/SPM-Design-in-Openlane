@@ -1,3 +1,5 @@
 *.v linguist-detectable=false
 *.lib linguist-detectable=false
 runs/* linguist-detectable=false
+*.v linguist-vendored
+*.tcl linguist-vendored

@@ -3,3 +3,6 @@
 runs/* linguist-detectable=false
 *.v linguist-vendored
 *.tcl linguist-vendored
+*.v linguist-vendored
+*.tcl linguist-vendored
+runs/ linguist-vendored

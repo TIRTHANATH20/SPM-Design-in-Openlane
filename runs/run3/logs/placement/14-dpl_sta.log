@@ -1,0 +1,305 @@
+OpenROAD b16bda7e82721d10566ff7e2b68f1ff0be9f9e38 
+Features included (+) or not (-): +Charts +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+define_corners Typical
+read_liberty -corner Typical /home/tirtha/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Using 1e-12 for capacitance...
+Using 1e+03 for resistance...
+Using 1e-09 for time...
+Using 1e+00 for voltage...
+Using 1e-03 for current...
+Using 1e-09 for power...
+Using 1e-06 for distance...
+[INFO]: Reading ODB at '/openlane/designs/spm/runs/run3/results/placement/spm.odb'…
+Reading design constraints file at '/openlane/scripts/base.sdc'…
+[INFO]: Setting output delay to: 2.0
+[INFO]: Setting input delay to: 2.0
+[WARNING STA-0366] port '__VIRTUAL_CLK__' not found.
+[INFO]: Setting load to: 0.033442
+[INFO]: Setting clock uncertainty to: 0.25
+[INFO]: Setting clock transition to: 0.15
+[WARNING STA-0419] transition time can not be specified for virtual clocks.
+[INFO]: Setting timing derate to: 5.0 %
+[INFO]: Setting RC values...
+min_report
+
+===========================================================================
+report_checks -path_delay min (Hold)
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+worst slack corner Typical: INF
+min_report_end
+max_report
+
+===========================================================================
+report_checks -path_delay max (Setup)
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+worst slack corner Typical: INF
+max_report_end
+checks_report
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= Typical Corner ===================================
+
+Startpoint: x (input port clocked by __VIRTUAL_CLK__)
+Endpoint: _307_ (rising edge-triggered flip-flop)
+Path Group: unconstrained
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          2.00    2.00 ^ input external delay
+     1    0.00    0.02    0.01    2.01 ^ x (in)
+                                         x (net)
+                  0.02    0.00    2.01 ^ _229_/A (sky130_fd_sc_hd__buf_2)
+    10    0.03    0.14    0.18    2.19 ^ _229_/X (sky130_fd_sc_hd__buf_2)
+                                         _000_ (net)
+                  0.14    0.00    2.19 ^ _144_/A (sky130_fd_sc_hd__clkbuf_4)
+    10    0.04    0.12    0.23    2.42 ^ _144_/X (sky130_fd_sc_hd__clkbuf_4)
+                                         _062_ (net)
+                  0.12    0.00    2.42 ^ _174_/A1 (sky130_fd_sc_hd__a21o_1)
+     2    0.01    0.06    0.14    2.57 ^ _174_/X (sky130_fd_sc_hd__a21o_1)
+                                         _085_ (net)
+                  0.06    0.00    2.57 ^ _176_/A (sky130_fd_sc_hd__nand2_1)
+     1    0.00    0.05    0.06    2.63 v _176_/Y (sky130_fd_sc_hd__nand2_1)
+                                         _087_ (net)
+                  0.05    0.00    2.63 v _177_/B (sky130_fd_sc_hd__xnor2_1)
+     1    0.00    0.13    0.15    2.78 ^ _177_/Y (sky130_fd_sc_hd__xnor2_1)
+                                         dsa[19].y_out_next (net)
+                  0.13    0.00    2.78 ^ _307_/D (sky130_fd_sc_hd__dfrtp_1)
+                                  2.78   data arrival time
+-----------------------------------------------------------------------------
+(Path is unconstrained)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= Typical Corner ===================================
+
+
+max slew violations count Typical: 0
+max fanout violations count Typical: 0
+max cap violations count Typical: 0
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 0 unannotated drivers.
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 64 unclocked register/latch pins.
+  _268_/CLK
+  _269_/CLK
+  _270_/CLK
+  _271_/CLK
+  _272_/CLK
+  _273_/CLK
+  _274_/CLK
+  _275_/CLK
+  _276_/CLK
+  _277_/CLK
+  _278_/CLK
+  _279_/CLK
+  _280_/CLK
+  _281_/CLK
+  _282_/CLK
+  _283_/CLK
+  _284_/CLK
+  _285_/CLK
+  _286_/CLK
+  _287_/CLK
+  _288_/CLK
+  _289_/CLK
+  _290_/CLK
+  _291_/CLK
+  _292_/CLK
+  _293_/CLK
+  _294_/CLK
+  _295_/CLK
+  _296_/CLK
+  _297_/CLK
+  _298_/CLK
+  _299_/CLK
+  _300_/CLK
+  _301_/CLK
+  _302_/CLK
+  _303_/CLK
+  _304_/CLK
+  _305_/CLK
+  _306_/CLK
+  _307_/CLK
+  _308_/CLK
+  _309_/CLK
+  _310_/CLK
+  _311_/CLK
+  _312_/CLK
+  _313_/CLK
+  _314_/CLK
+  _315_/CLK
+  _316_/CLK
+  _317_/CLK
+  _318_/CLK
+  _319_/CLK
+  _320_/CLK
+  _321_/CLK
+  _322_/CLK
+  _323_/CLK
+  _324_/CLK
+  _325_/CLK
+  _326_/CLK
+  _327_/CLK
+  _328_/CLK
+  _329_/CLK
+  _330_/CLK
+  _331_/CLK
+Warning: There are 65 unconstrained endpoints.
+  y
+  _268_/D
+  _269_/D
+  _270_/D
+  _271_/D
+  _272_/D
+  _273_/D
+  _274_/D
+  _275_/D
+  _276_/D
+  _277_/D
+  _278_/D
+  _279_/D
+  _280_/D
+  _281_/D
+  _282_/D
+  _283_/D
+  _284_/D
+  _285_/D
+  _286_/D
+  _287_/D
+  _288_/D
+  _289_/D
+  _290_/D
+  _291_/D
+  _292_/D
+  _293_/D
+  _294_/D
+  _295_/D
+  _296_/D
+  _297_/D
+  _298_/D
+  _299_/D
+  _300_/D
+  _301_/D
+  _302_/D
+  _303_/D
+  _304_/D
+  _305_/D
+  _306_/D
+  _307_/D
+  _308_/D
+  _309_/D
+  _310_/D
+  _311_/D
+  _312_/D
+  _313_/D
+  _314_/D
+  _315_/D
+  _316_/D
+  _317_/D
+  _318_/D
+  _319_/D
+  _320_/D
+  _321_/D
+  _322_/D
+  _323_/D
+  _324_/D
+  _325_/D
+  _326_/D
+  _327_/D
+  _328_/D
+  _329_/D
+  _330_/D
+  _331_/D
+checks_report_end
+power_report
+
+===========================================================================
+ report_power
+============================================================================
+======================= Typical Corner ===================================
+
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             9.36e-05   6.05e-05   8.04e-10   1.54e-04  41.5%
+Combinational          1.32e-04   8.49e-05   9.59e-10   2.17e-04  58.5%
+Clock                  0.00e+00   0.00e+00   1.88e-10   1.88e-10   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  2.26e-04   1.45e-04   1.95e-09   3.71e-04 100.0%
+                          60.8%      39.2%       0.0%
+
+power_report_end
+summary_report
+
+===========================================================================
+report_tns
+============================================================================
+tns 0.00
+
+===========================================================================
+report_wns
+============================================================================
+wns 0.00
+
+===========================================================================
+report_worst_slack -max (Setup)
+============================================================================
+worst slack INF
+
+===========================================================================
+report_worst_slack -min (Hold)
+============================================================================
+worst slack INF
+summary_report_end
+area_report
+
+===========================================================================
+report_design_area
+============================================================================
+Design area 3113 u^2 48% utilization.
+area_report_end
+check_nonpropagated_clocks
+__VIRTUAL_CLK__
+check_nonpropagated_clocks_end
+[WARNING] Did not save OpenROAD database!
+Writing SDF to '/openlane/designs/spm/runs/run3/results/signoff/spm.sdf'…

@@ -1,0 +1,10 @@
+%Error: Cannot find file containing module: $::env(DESIGN_DIR)/src/spm.v
+%Error: This may be because there's no search path specified with -I<dir>.
+        ... Looked in:
+             $::env(DESIGN_DIR)/src/spm.v
+             $::env(DESIGN_DIR)/src/spm.v.v
+             $::env(DESIGN_DIR)/src/spm.v.sv
+             obj_dir/$::env(DESIGN_DIR)/src/spm.v
+             obj_dir/$::env(DESIGN_DIR)/src/spm.v.v
+             obj_dir/$::env(DESIGN_DIR)/src/spm.v.sv
+%Error: Exiting due to 2 error(s)

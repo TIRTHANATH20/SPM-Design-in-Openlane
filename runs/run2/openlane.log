@@ -1,0 +1,18 @@
+[INFO]: Saving runtime environment...
+[INFO]: Preparing LEF files for the nom corner...
+[INFO]: Preparing LEF files for the min corner...
+[INFO]: Preparing LEF files for the max corner...
+[WARNING]: PNR_SDC_FILE is not set. It is recommended to write a custom SDC file for the design. Defaulting to BASE_SDC_FILE
+[WARNING]: SIGNOFF_SDC_FILE is not set. It is recommended to write a custom SDC file for the design. Defaulting to BASE_SDC_FILE
+[INFO]: Running linter (Verilator) (log: designs/spm/runs/run2/logs/synthesis/linter.log)...
+[ERROR]: Step 0 (verilator_lint_check) failed with error:
+-code 1 -level 0 -errorstack {INNER loadArrayStk CALL run_verilator CALL run_verilator_step CALL {run_non_interactive_mode -design spm -tag run2 -overwrite}} -errorcode {TCL READ VARNAME} -errorinfo {no such variable
+    (read trace on "::env(DESIGN_NAME)")
+    invoked from within
+"catch_exec verilator  -Wall  --lint-only  --Wno-DECLFILENAME  --top-module $::env(DESIGN_NAME)  {*}$arg_list |& tee $log $::env(TERMINAL_OUTPUT)"
+    (procedure "run_verilator" line 69)
+    invoked from within
+"run_verilator"
+    (procedure "run_verilator_step" line 3)
+    invoked from within
+"run_verilator_step"} -errorline 1

@@ -1,0 +1,5 @@
+[WARNING STA-0366] port '__VIRTUAL_CLK__' not found.
+[WARNING STA-0419] transition time can not be specified for virtual clocks.
+Warning: There are 64 unclocked register/latch pins.
+Warning: There are 65 unconstrained endpoints.
+[WARNING] Did not save OpenROAD database!
